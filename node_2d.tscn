@@ -1,0 +1,29 @@
+[gd_scene load_steps=2 format=3 uid="uid://bibap3uvd2ypo"]
+
+[ext_resource type="Script" path="res://Node2D.gd" id="1_og1f4"]
+
+[node name="Node2D" type="Node2D"]
+script = ExtResource("1_og1f4")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+offset_right = 1157.0
+offset_bottom = 651.0
+theme_override_constants/separation = 20
+
+[node name="Button" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 25
+text = "Start Location"
+
+[node name="Button2" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 25
+text = "Stop Location"
+
+[node name="Label" type="Label" parent="VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 25
+text = "My Label"
+
+[connection signal="pressed" from="VBoxContainer/Button" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="VBoxContainer/Button2" to="." method="_on_button_2_pressed"]
